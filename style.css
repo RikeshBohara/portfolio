@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f5f5f7;
+  --secondary-color: #fbfbfb;
+  --border: 1px solid #ccc6c6;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+#header {
+  background-color: var(--secondary-color);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+}
+
+.logo {
+  height: 7rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+  padding: 2rem;
+}
+
+.assignment {
+  width: 300px;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.assignment img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.assignment-info {
+  padding: 0rem 1rem;
+}
+
+.assignment-info h3 {
+  margin-top: 0;
+}
+
+.assignment:hover {
+  border: 2px solid #fd8b51;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.overview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.overview::-webkit-scrollbar-thumb {
+  background: #b7b7b7;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.overview > .bottom {
+  margin-top: 35vh;
+}
+
+.overview span {
+  position: absolute;
+  bottom: 1rem;
+  background-color: #0d92f4;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.overview span a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.span1 {
+  left: 8rem;
+}
+
+.assignment:hover .overview {
+  transform: translateY(0);
+}
+
+#footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: var(--border);
+  background-color: var(--secondary-color);
+}
+
+.copy {
+  font-size: rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
