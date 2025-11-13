@@ -44,18 +44,6 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -147,23 +135,6 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-}
-
-.stats {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-}
-
-.stat-icon {
-  font-size: 1.2rem;
 }
 
 .cta-buttons {
