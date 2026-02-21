@@ -9,7 +9,7 @@
   --secondary-color: #764ba2;
   --dark-bg: #EBEBEB;
   --card-bg: #FFFDF6;
-  --text-primary: #030303;
+  --text-primary: #667eea;
   --text-secondary: #222222;
   --accent: #667eea;
 }
@@ -51,7 +51,8 @@ body {
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bolder;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
@@ -112,11 +113,7 @@ body {
   font-weight: 800;
   font-family: "Sacramento", cursive;
   margin: 0.5rem 0;
-  background: linear-gradient(
-    135deg,
-    var(--text-primary),
-    var(--text-secondary)
-  );
+  background: var(--text-secondary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -395,6 +392,11 @@ body {
   font-size: 1.3rem;
 }
 
+.skills-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -482,7 +484,7 @@ body {
 .project-card h3 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .project-footer {
