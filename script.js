@@ -159,19 +159,23 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    const heroImage = document.querySelector('.hero-image');
-    
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        if (heroImage) {
-            heroImage.style.transform = `translateY(${scrolled * 0.2}px)`;
+// Add parallax effect to hero section on larger screens only.
+const canUseParallax = window.matchMedia('(min-width: 969px) and (prefers-reduced-motion: no-preference)').matches;
+
+if (canUseParallax) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroContent = document.querySelector('.hero-content');
+        const heroImage = document.querySelector('.hero-image');
+        
+        if (heroContent && scrolled < window.innerHeight) {
+            heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.2}px)`;
+            }
         }
-    }
-});
+    });
+}
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
